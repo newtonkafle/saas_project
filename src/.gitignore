@@ -1,4 +1,5 @@
 staticfiles
 local-cdn
 db.sqlite3
+db_test.py
 .env

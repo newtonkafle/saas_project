@@ -1,0 +1,4 @@
+staticfiles
+local-cdn
+db.sqlite3
+.env

@@ -1,0 +1,15 @@
+{% extends "allauth/layouts/base.html" %} {% block content %}
+<h1 class="text-lg font-medium">{{instance.username}}</h1>
+
+<div>
+  {% if perms.auth or owner %} {% if perms.auth.view_user or owner %}
+  <div>{{ instance.username }} - {{instance.last_login}}</div>
+  {% else %}
+  <div class="hello">
+    <p>You are not allowed to list the users</p>
+  </div>
+  {% endif %} {% else %}
+  <div>You dont' have any permission1</div>
+  {% endif %}
+</div>
+{% endblock content %}

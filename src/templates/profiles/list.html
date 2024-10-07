@@ -1,0 +1,25 @@
+{% extends "allauth/layouts/base.html" %}
+{% block content %}
+<h1 class="text-lg font-medium">Users</h1>
+
+<div>
+        {% if perms.auth %} 
+
+        {% if perms.auth.view_user %}
+            <div>
+                <ul>
+                    {% for instance in object_list %}
+                        <li>
+                            <a href="/profiles/{{ instance.username }}">{{ instance.username }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% else %}
+            <div>
+                You are not allowed to list the users
+            </div>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock content %}

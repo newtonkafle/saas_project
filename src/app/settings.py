@@ -37,8 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # user_app
     'visits',
     'commando',
+    'user_profiles',
+    'subscriptions',
     # thrid party app
     'allauth_ui',
     'allauth',
